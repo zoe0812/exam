@@ -25,7 +25,7 @@ class UserController extends Controller
 
         Auth::attempt($form);
         if(Auth::check()){
-            return response("login successful");
+            return redirect("/home");
         }else{
             return response("login failed");
         }
